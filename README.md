@@ -1,14 +1,17 @@
-# lemonade-example
+# Lemonade Example Template
 
-A Leiningen template for FIXME.
+A Leiningen template for creating visualisations using the Lemonade graphical
+programming language.
 
 ## Usage
 
-FIXME
+```sh
+$ lein new lemonade NAME
+```
 
 ## License
 
-Copyright © 2018 FIXME
+Copyright © 2018 Thomas Getgood
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.

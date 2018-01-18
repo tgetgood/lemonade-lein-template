@@ -1,10 +1,10 @@
-(ns leiningen.new.lemonade-example
+(ns leiningen.new.lemonade
   (:require [leiningen.new.templates :refer [renderer name-to-path ->files]]
             [leiningen.core.main :as main]))
 
-(def render (renderer "lemonade-example"))
+(def render (renderer "lemonade"))
 
-(defn lemonade-example
+(defn lemonade
   "FIXME: write documentation"
   [name]
   (let [data {:name      name

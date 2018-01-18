@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file. This change
 ### Changed
 - Add a new arity to `make-widget-async` to provide a different widget shape.
 
-## [0.1.1] - 2018-01-14
+## [0.1.0] - 2018-01-14
 ### Changed
 - Documentation on how to make the widgets.
 
@@ -20,5 +20,5 @@ All notable changes to this project will be documented in this file. This change
 - Files from the new template.
 - Widget maker public API - `make-widget-sync`.
 
-[Unreleased]: https://github.com/your-name/lemonade-example/compare/0.1.1...HEAD
-[0.1.1]: https://github.com/your-name/lemonade-example/compare/0.1.0...0.1.1
+[Unreleased]: https://github.com/tgetgood/lemonade-lein-template/compare/0.1.0...HEAD
+[0.1.0]: https://github.com/tgetgood/lemonade-lein-template/tags/0.1.0

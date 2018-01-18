@@ -18,22 +18,19 @@
     [(-> l/text
          (assoc :text text)
          (l/scale 4)
-         (l/translate [250 550])
-         )
+         (l/translate [250 550]))
      (map (fn [i] (l/translate
                    (assoc l/circle :radius 100)
                    [(* (inc i) 200) 400]))
           (range count))]))
 
-(defn on-reload []
-  (system/fullscreen host)
+(defn ^:export init []
   (system/initialise!
    {:host      host
+    :size      :fullscreen
     :handler   image-fn
-    :behaviour #(-> %
-                    window/wrap-windowing
-                    hlei/wrap)
+    :behaviour (comp hlei/wrap window/wrap-windowing)
     :app-db    app-db}))
 
-(defn ^:export init []
+(defn on-reload []
   (on-reload))
