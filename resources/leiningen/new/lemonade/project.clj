@@ -15,6 +15,8 @@
 
   :source-paths ["src"]
 
+  :main {{name}}.core
+
   :cljsbuild
   {:builds
    [{:id           "dev"

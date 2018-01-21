@@ -8,8 +8,6 @@
 
 #?(:cljs (enable-console-print!))
 
-(def host hosts/default-host)
-
 (defonce app-db (atom {:text "Almost Useless"
                        :count 3}))
 
@@ -26,7 +24,7 @@
 
 (defn ^:export init []
   (system/initialise!
-   {:host      host
+   {:host      hosts/default-host
     :size      :fullscreen
     :handler   image-fn
     :behaviour (comp hlei/wrap window/wrap-windowing)
