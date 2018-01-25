@@ -1,17 +1,13 @@
 (ns {{name}}.core
-  (:require
-   [lemonade.core :as l]
-   [lemonade.hosts :as hosts]
-   [lemonade.system :as system]
-   [lemonade.window :as window]
-   [lemonade.events.hlei :as hlei]))
+    (:require [lemonade.core :as l]
+              [lemonade.system :as system]))
 
 #?(:cljs (enable-console-print!))
 
 (defonce app-db (atom {:text "Almost Useless"
                        :count 3}))
 
-(defn image-fn [state]
+(defn render [state]
   (let [{:keys [text count]} state]
     [(-> l/text
          (assoc :text text)
@@ -24,11 +20,9 @@
 
 (defn ^:export init []
   (system/initialise!
-   {:host      hosts/default-host
-    :size      :fullscreen
-    :handler   image-fn
-    :behaviour (comp hlei/wrap window/wrap-windowing)
-    :app-db    app-db}))
+   {:size   :fullscreen
+    :render render
+    :app-db app-db}))
 
 (defn on-reload []
   (on-reload))
