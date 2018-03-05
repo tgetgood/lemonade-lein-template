@@ -1,12 +1,12 @@
-# Lemonade Example Template
+# Ubik Example Template
 
-A Leiningen template for creating visualisations using the Lemonade graphical
+A Leiningen template for creating visualisations using the Ubik graphical
 programming language.
 
 ## Usage
 
 ```sh
-$ lein new lemonade NAME
+$ lein new ubik NAME
 ```
 
 ## License

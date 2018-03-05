@@ -1,6 +1,6 @@
 (ns {{name}}.core
-    (:require [lemonade.core :as l]
-              [lemonade.system :as system]))
+    (:require [ubik.core :as l]
+              [ubik.system :as system]))
 
 #?(:cljs (enable-console-print!))
 

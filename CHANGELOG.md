@@ -20,5 +20,5 @@ All notable changes to this project will be documented in this file. This change
 - Files from the new template.
 - Widget maker public API - `make-widget-sync`.
 
-[Unreleased]: https://github.com/tgetgood/lemonade-lein-template/compare/0.1.0...HEAD
-[0.1.0]: https://github.com/tgetgood/lemonade-lein-template/tags/0.1.0
+[Unreleased]: https://github.com/tgetgood/ubik-lein-template/compare/0.1.0...HEAD
+[0.1.0]: https://github.com/tgetgood/ubik-lein-template/tags/0.1.0

@@ -1,15 +1,15 @@
-(ns leiningen.new.lemonade
+(ns leiningen.new.ubik
   (:require [leiningen.new.templates :refer [renderer name-to-path ->files]]
             [leiningen.core.main :as main]))
 
-(def render (renderer "lemonade"))
+(def render (renderer "ubik"))
 
-(defn lemonade
+(defn ubik
   "FIXME: write documentation"
   [name]
   (let [data {:name      name
               :sanitized (name-to-path name)}]
-    (main/info "Generating fresh Lemonade example project.")
+    (main/info "Generating fresh Ubik example project.")
     (->files data
              ["project.clj" (render "project.clj" data)]
              [".gitignore" (render ".gitignore" data)]
