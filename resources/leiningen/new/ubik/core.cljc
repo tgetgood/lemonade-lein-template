@@ -1,13 +1,13 @@
 (ns {{name}}.core
     (:require [ubik.core :as l]
-              [ubik.system :as system]))
+              [ubik.hosts :as hosts]))
 
 #?(:cljs (enable-console-print!))
 
-(defonce app-db (atom {:text "Almost Useless"
-                       :count 3}))
+(def app-state {:text "Almost Useless"
+                :count 3})
 
-(defn render [state]
+(defn shape [state]
   (let [{:keys [text count]} state]
     [(-> l/text
          (assoc :text text)
@@ -18,11 +18,10 @@
                    [(* (inc i) 200) 400]))
           (range count))]))
 
+(def host (hosts/default-host {}))
+
 (defn ^:export init []
-  (system/initialise!
-   {:size   :fullscreen
-    :render render
-    :app-db app-db}))
+  (l/draw! (shape app-state) host))
 
 (defn on-reload []
-  (on-reload))
+  (init))
